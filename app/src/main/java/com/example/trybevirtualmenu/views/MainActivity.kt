@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.trybevirtualmenu.R
+import com.example.trybevirtualmenu.adapters.DishAdapter
+import com.example.trybevirtualmenu.commom.VirtualMenuDatabase
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,7 +15,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        dishList.layoutManager = LinearLayoutManager(baseContext)
 
+        val dishes = VirtualMenuDatabase.getDishes()
+
+        dishList.layoutManager = LinearLayoutManager(baseContext)
+        dishList.adapter = DishAdapter(dishes)
     }
 }
