@@ -14,13 +14,6 @@ object VirtualMenuDatabase {
         ),
         Dish(
             2,
-            "File de Carne com Fritas",
-            R.drawable.prato_01,
-            "Uma suculenta porção de filé de carne grelhado na perfeição, servido com deliciosas batatas fritas crocantes. Uma explosão de sabor que vai satisfazer seus desejos mais carnívoros.",
-            65
-        ),
-        Dish(
-            1,
             "Frango Grelhado com Legumes",
             R.drawable.prato_02,
             "Uma opção saudável e saborosa: peitos de frango suculentos grelhados " +
