@@ -8,6 +8,7 @@
     android:layout_marginBottom="10dp"
     android:background="@color/secondary"
     android:elevation="10dp"
+    app:cardBackgroundColor="#81926E"
     app:cardCornerRadius="10dp">
 
     <LinearLayout
