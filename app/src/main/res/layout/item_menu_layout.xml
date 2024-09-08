@@ -21,7 +21,8 @@
             android:id="@+id/item_menu_image"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/item_menu_name"
