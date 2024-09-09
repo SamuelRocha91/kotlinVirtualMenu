@@ -20,15 +20,21 @@ class DishAdapter(val dishes: List<Dish>): Adapter<DishAdapter.DishViewHolder>()
         this.dishEventListener = listener
     }
 
-    class DishViewHolder(view: View): ViewHolder(view) {
+    class DishViewHolder(view: View, dishListener: DishItemListener?): ViewHolder(view) {
         val name: TextView = view.findViewById(R.id.item_menu_name)
         val image: ImageView = view.findViewById(R.id.item_menu_image)
+
+        init {
+            view.setOnClickListener {
+                dishListener?.onDishClick(view, adapterPosition)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DishViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_menu_layout, parent, false)
-        return  DishViewHolder(view)
+        return  DishViewHolder(view, dishEventListener)
     }
 
     override fun getItemCount(): Int {
