@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity(), DishItemListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         val dishes = VirtualMenuDatabase.getDishes()
         val adapter = DishAdapter(dishes)
         adapter.setDishListener(this)
