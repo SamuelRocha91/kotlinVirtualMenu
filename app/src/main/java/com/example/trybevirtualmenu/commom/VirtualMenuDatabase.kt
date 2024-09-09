@@ -1,7 +1,7 @@
 package com.example.trybevirtualmenu.commom
 
 import com.example.trybevirtualmenu.R
-import com.example.trybevirtualmenu.domain.dish.Dish
+import com.example.trybevirtualmenu.models.Dish
 
 object VirtualMenuDatabase {
     private val dishes = listOf(

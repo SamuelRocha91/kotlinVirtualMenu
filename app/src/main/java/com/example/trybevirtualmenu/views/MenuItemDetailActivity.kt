@@ -23,13 +23,15 @@ class MenuItemDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_item_detail)
 
-        val dishId = intent.getIntExtra("id", 0)
-        val dish = VirtualMenuDatabase.getDishById(dishId + 1)!!
-        image_dish.setImageResource(dish.photo)
-        name.text = dish.name
-        description.text = dish.description
-        price.text = "R$ ${dish.price},00"
+        val dishId = intent.getIntExtra("id", 0) + 1
+        val dish = VirtualMenuDatabase.getDishById(dishId)
 
+        if (dish != null) {
+            image_dish.setImageResource(dish.photo)
+            name.text = dish.name
+            description.text = dish.description
+            price.text = "R$ ${dish.price},00"
+        }
         button.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
