@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.trybevirtualmenu.R
-import com.example.trybevirtualmenu.domain.dish.Dish
+import com.example.trybevirtualmenu.models.Dish
 import com.example.trybevirtualmenu.interfaces.DishItemListener
 
 class DishAdapter(val dishes: List<Dish>) : Adapter<DishAdapter.DishViewHolder>() {
