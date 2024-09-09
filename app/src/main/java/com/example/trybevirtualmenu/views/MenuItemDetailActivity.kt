@@ -13,7 +13,6 @@ import com.example.trybevirtualmenu.commom.VirtualMenuDatabase
 class MenuItemDetailActivity : AppCompatActivity() {
 
     private val image_dish: ImageView by lazy { findViewById(R.id.detail_image) }
-    private val title: TextView by lazy { findViewById(R.id.detail_title) }
     private val name: TextView by lazy { findViewById(R.id.detail_name) }
     private val description: TextView by lazy { findViewById(R.id.detail_description) }
     private val price: TextView by lazy { findViewById(R.id.detail_price) }
