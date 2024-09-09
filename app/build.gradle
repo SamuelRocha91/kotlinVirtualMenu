@@ -33,8 +33,6 @@ android {
         jvmTarget = '1.8'
     }
 
-    tasks.getByPath("preBuild").dependsOn("ktlintFormat")
-
     ktlint {
         android = true
         ignoreFailures = true
