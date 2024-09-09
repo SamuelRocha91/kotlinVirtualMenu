@@ -1,11 +1,13 @@
 package com.example.trybevirtualmenu.views
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.trybevirtualmenu.R
+import com.example.trybevirtualmenu.commom.VirtualMenuDatabase
 
 class MenuItemDetailActivity : AppCompatActivity() {
 
@@ -17,8 +19,16 @@ class MenuItemDetailActivity : AppCompatActivity() {
     private val price: TextView by lazy { findViewById(R.id.detail_price) }
     private val button: Button by lazy { findViewById(R.id.detail_back) }
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_item_detail)
+
+        val dishId = intent.getIntExtra("id", 0)
+        val dish = VirtualMenuDatabase.getDishById(dishId + 1)!!
+        image_dish.setImageResource(dish.photo)
+        name.text = dish.name
+        description.text = dish.description
+        price.text = "R$ ${dish.price},00"
     }
 }

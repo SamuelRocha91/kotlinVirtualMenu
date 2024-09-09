@@ -1,5 +1,6 @@
 package com.example.trybevirtualmenu.views
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -27,6 +28,8 @@ class MainActivity : AppCompatActivity(), DishItemListener {
     }
 
     override fun onDishClick(view: View, position: Int) {
-        TODO("Not yet implemented")
+        val it = Intent(baseContext, MenuItemDetailActivity::class.java)
+        it.putExtra("id", position)
+        startActivity(it)
     }
 }
