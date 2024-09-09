@@ -3,6 +3,8 @@
 
 Este repositório contém o código-fonte para uma aplicação Android que exibe um cardápio de restaurante. A aplicação inclui funcionalidades para visualizar uma lista de pratos, detalhes de cada prato e navegação entre as telas.
 
+![Preview da aplicação](./assets/menuVirtual.gif)
+
 ## Funcionalidades
 
 1. **Tela Inicial do Cardápio**: 
