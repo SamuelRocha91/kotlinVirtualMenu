@@ -27,6 +27,7 @@
                 android:text="@string/back"
                 android:textColor="@color/white"
                 android:textStyle="bold"
+                app:backgroundTint="@color/secondary"
                 app:icon="@drawable/arrow_back"
                 app:iconTint="@color/white" />
 
