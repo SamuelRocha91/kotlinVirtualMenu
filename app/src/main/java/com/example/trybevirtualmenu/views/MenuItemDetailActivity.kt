@@ -1,6 +1,7 @@
 package com.example.trybevirtualmenu.views
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
@@ -30,5 +31,10 @@ class MenuItemDetailActivity : AppCompatActivity() {
         name.text = dish.name
         description.text = dish.description
         price.text = "R$ ${dish.price},00"
+
+        button.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
