@@ -19,9 +19,11 @@ class MainActivity : AppCompatActivity(), DishItemListener {
         setContentView(R.layout.activity_main)
 
         val dishes = VirtualMenuDatabase.getDishes()
+        val adapter = DishAdapter(dishes)
+        adapter.setDishListener(this)
 
         dishList.layoutManager = LinearLayoutManager(baseContext)
-        dishList.adapter = DishAdapter(dishes)
+        dishList.adapter = adapter
     }
 
     override fun onDishClick(view: View, position: Int) {
