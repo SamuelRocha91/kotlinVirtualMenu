@@ -32,7 +32,7 @@ class MenuItemDetailActivity : AppCompatActivity() {
         description.text = dish.description
         price.text = "R$ ${dish.price},00"
 
-        button.setOnClickListener{
+        button.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }

@@ -10,9 +10,8 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.trybevirtualmenu.R
 import com.example.trybevirtualmenu.domain.dish.Dish
 import com.example.trybevirtualmenu.interfaces.DishItemListener
-import com.google.android.material.imageview.ShapeableImageView
 
-class DishAdapter(val dishes: List<Dish>): Adapter<DishAdapter.DishViewHolder>() {
+class DishAdapter(val dishes: List<Dish>) : Adapter<DishAdapter.DishViewHolder>() {
 
     private var dishEventListener: DishItemListener? = null
 
@@ -20,7 +19,7 @@ class DishAdapter(val dishes: List<Dish>): Adapter<DishAdapter.DishViewHolder>()
         this.dishEventListener = listener
     }
 
-    class DishViewHolder(view: View, dishListener: DishItemListener?): ViewHolder(view) {
+    class DishViewHolder(view: View, dishListener: DishItemListener?) : ViewHolder(view) {
         val name: TextView = view.findViewById(R.id.item_menu_name)
         val image: ImageView = view.findViewById(R.id.item_menu_image)
 
@@ -34,7 +33,7 @@ class DishAdapter(val dishes: List<Dish>): Adapter<DishAdapter.DishViewHolder>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DishViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_menu_layout, parent, false)
-        return  DishViewHolder(view, dishEventListener)
+        return DishViewHolder(view, dishEventListener)
     }
 
     override fun getItemCount(): Int {

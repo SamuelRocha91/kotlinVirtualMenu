@@ -84,10 +84,10 @@ class MainActivityTest {
                 matches(
                     hasDescendant(
                         allOf(
-                            hasDescendant(withText("File de Carne com Fritas")),
-                        ),
-                    ),
-                ),
+                            hasDescendant(withText("File de Carne com Fritas"))
+                        )
+                    )
+                )
             )
     }
 
@@ -101,10 +101,10 @@ class MainActivityTest {
                             withId(getId("item_menu_card_view")),
                             hasDescendant(withId(getId("item_menu_linear_container"))),
                             hasDescendant(withId(getId("item_menu_image"))),
-                            hasDescendant(withId(getId("item_menu_name"))),
-                        ),
-                    ),
-                ),
+                            hasDescendant(withId(getId("item_menu_name")))
+                        )
+                    )
+                )
             )
     }
 
@@ -117,7 +117,7 @@ class MainActivityTest {
 
         onView(withId(getId("main_menu")))
             .perform(
-                RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()),
+                RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click())
             )
 
         intended(hasComponent(MenuItemDetailActivity::class.java.name))
@@ -135,7 +135,7 @@ class MainActivityTest {
 
         onView(withId(getId("main_menu")))
             .perform(
-                RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()),
+                RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click())
             )
 
         intended(hasComponent(MenuItemDetailActivity::class.java.name))
