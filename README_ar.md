@@ -83,5 +83,5 @@
 - `app/src/main/res/drawable/`: الصور والموارد الرسومية الأخرى.
  ## مشاريع أخرى 
 
--  ☀️ [Weather App](https://github.com/SamuelRocha91/kotlinWeatherApp)
-- 👤 [Social Login](https://github.com/SamuelRocha91/kotlinLoginSocial)
+-  ☀️ [Weather App](https://github.com/SamuelRocha91/kotlinWeatherApp/blob/main/README_ar.md)
+- 👤 [Social Login](https://github.com/SamuelRocha91/kotlinLoginSocial/blob/main/README_ar.md)
